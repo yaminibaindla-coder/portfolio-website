@@ -1,263 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yamini Baindla | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamini Baindla | Futuristic Portfolio</title>
+    <meta name="description" content="Portfolio of Yamini Baindla - Front-End Web Developer specializing in modern, interactive web experiences.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <button class="nav-toggle" aria-label="Open navigation menu">Menu</button>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="hero-text">
-        <p class="eyebrow">Front-End Web Developer</p>
-        <h1>Yamini Baindla</h1>
-        <p class="subtitle">I design responsive, modern websites and web applications using HTML, CSS, JavaScript, Python, and SQL.</p>
-        <div class="hero-tags">
-          <span>Hyderabad</span>
-          <span>Responsive Design</span>
-          <span>Full Stack Learner</span>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <h1 class="orbitron">INITIALIZING</h1>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
         </div>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button secondary" href="mailto:yaminibaindla@gmail.com">Contact Me</a>
-        </div>
-      </div>
+    </div>
 
-      <div class="hero-card">
-        <div class="hero-card-inner">
-          <img src="WhatsApp Image 2026-05-02 at 9.49.23 AM.jpeg" alt="Profile illustration of Yamini Baindla" class="hero-image" />
-          <div class="hero-info">
-            <p class="hero-label">Aspiring Developer</p>
-            <h2>Crafting modern web experiences</h2>
-            <p>I build polished front-end interfaces and enjoy learning back-end workflows to deliver functional, responsive websites.</p>
-            <ul>
-              <li><strong>HTML</strong>, CSS, Bootstrap</li>
-              <li><strong>JavaScript</strong>, Python</li>
-              <li><strong>SQL</strong> & database design</li>
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo orbitron">YB<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-          </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </nav>
 
-  <nav class="site-nav" id="site-nav">
-    <div class="container nav-inner">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#hobbies">Hobbies</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="eyebrow orbitron">FRONT-END DEVELOPER</p>
+                    <h1 class="orbitron" id="typing-text"></h1>
+                    <p class="subtitle">Crafting immersive digital experiences through code and creativity. Specializing in modern web technologies and 3D interactions.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn primary">View Projects</a>
+                        <a href="#contact" class="btn secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div id="hero-3d-container"></div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <p>Scroll to explore</p>
+            </div>
+        </section>
 
-  <main class="container main-content">
-    <section id="about" class="section card">
-      <div class="section-heading">
-        <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12c2.8 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/></svg></span>
-        <h2>About Me</h2>
-      </div>
-      <p>I am an aspiring web developer from Hyderabad who loves turning ideas into responsive digital experiences. My focus is on clean layouts, intuitive interfaces, and websites that look great on every device.</p>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1 .9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
-          <strong>Email</strong>
-          <p><a href="mailto:yaminibaindla@gmail.com">yaminibaindla@gmail.com</a></p>
-        </div>
-        <div class="contact-item">
-          <span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l1.69-1.69a1 1 0 0 1 1.06-.24c1.12.45 2.33.69 3.57.69a1 1 0 0 1 1 1v3.2a1 1 0 0 1-1 1A17 17 0 0 1 3 6a1 1 0 0 1 1-1h3.2a1 1 0 0 1 1 1c0 1.24.24 2.45.69 3.57a1 1 0 0 1-.24 1.06L6.62 10.79z"/></svg></span>
-          <strong>Phone</strong>
-          <p>+91 95152 86453</p>
-        </div>
-        <div class="contact-item">
-          <span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg></span>
-          <strong>Location</strong>
-          <p>Hyderabad, India</p>
-        </div>
-        <div class="contact-item">
-          <span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1 .9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14H8v-6h2v6zm-1-7.2c-.66 0-1.2-.54-1.2-1.2S8.34 7.4 9 7.4s1.2.54 1.2 1.2S9.66 9.8 9 9.8zm11 7.2h-2v-3c0-.8-.7-1.5-1.5-1.5S14 14 14 14.8v3h-2v-6h2v.7c.4-.5 1.1-1.2 2.5-1.2 1.8 0 3 1.2 3 3.6v3.9z"/></svg></span>
-          <strong>LinkedIn</strong>
-          <p><a href="https://www.linkedin.com/yamini-baindla" target="_blank" rel="noreferrer">linkedin.com/yamini-baindla</a></p>
-        </div>
-      </div>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="orbitron">_About_Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text glass">
+                        <p>I am an aspiring web developer from Hyderabad who loves turning ideas into responsive digital experiences. My focus is on clean layouts, intuitive interfaces, and websites that look great on every device.</p>
+                        <p>With a background in Mathematics, Physics, and Chemistry, I bring analytical thinking to problem-solving. My journey in tech is fueled by curiosity and a passion for creating "WOW" moments on the web.</p>
+                        <div class="about-info">
+                            <div class="info-item">
+                                <span>Location</span>
+                                <p>Hyderabad, India</p>
+                            </div>
+                            <div class="info-item">
+                                <span>Education</span>
+                                <p>ITI Stenographer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="education" class="section card">
-      <div class="section-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2 1 8l11 6 11-6-11-6zm0 8.2-8-4.4V15h16V5.8l-8 4.4z"/></svg></span><h2>Education</h2></div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>ITI – Stenographer</h3>
-          <p>Government ITI, Hyderabad</p>
-          <span class="date">2023 – 2024</span>
-          <p>Completed vocational training in office operations and stenography, strengthening documentation and workflow skills.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Intermediate (MPC)</h3>
-          <p>Hindu Junior College for Women, Hyderabad</p>
-          <span class="date">2021 – 2023</span>
-          <p>Studied mathematics, physics, and chemistry while improving analytical thinking.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>SSC</h3>
-          <p>Seven Hills High School, Hyderabad</p>
-          <span class="date">2020 – 2021</span>
-          <p>Graduated with a strong academic foundation and enthusiasm for technology.</p>
-        </div>
-      </div>
-    </section>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="orbitron">_Tech_Stack</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card glass">
+                        <i class="fab fa-html5"></i>
+                        <h3>Front-End</h3>
+                        <p>HTML5, CSS3, JavaScript, Bootstrap</p>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming</h3>
+                        <p>Python, JavaScript ES6+, SQL</p>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-database"></i>
+                        <h3>Database</h3>
+                        <p>MySQL, Data Modeling</p>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools</h3>
+                        <p>VS Code, GitHub, Git, Three.js</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="skills" class="section card">
-      <div class="section-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 6.5 3 12l5.5 5.5M15.5 6.5 21 12l-5.5 5.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span><h2>Skills</h2></div>
-      <div class="skill-grid">
-        <div class="skill-card">
-          <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 6.5 3 12l5.5 5.5M15.5 6.5 21 12l-5.5 5.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-          <h3>Front-End</h3>
-          <p>HTML, CSS, Bootstrap, responsive design</p>
-        </div>
-        <div class="skill-card">
-          <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M8 7v10M16 7v10" stroke="currentColor" stroke-width="2" fill="none"/></svg></span>
-          <h3>Programming</h3>
-          <p>JavaScript, Python, debugging</p>
-        </div>
-        <div class="skill-card">
-          <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v4H4V6zm0 8h16v4H4v-4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 8h12M6 16h12" stroke="currentColor" stroke-width="2"/></svg></span>
-          <h3>Database</h3>
-          <p>SQL, data modeling, MySQL Workbench</p>
-        </div>
-        <div class="skill-card">
-          <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2 4 4 .5-3 3 1 4-4-2-4 2 1-4-3-3 4-.5L12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
-          <h3>Tools</h3>
-          <p>VS Code, GitHub, version control</p>
-        </div>
-        <div class="skill-card">
-          <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" fill="none"/></svg></span>
-          <h3>Soft Skills</h3>
-          <p>Problem solving, communication, teamwork</p>
-        </div>
-      </div>
-    </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="orbitron">_Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card glass">
+                        <div class="project-content">
+                            <h3 class="orbitron">Kisan Market</h3>
+                            <p>A mobile-first marketplace website that connects farmers with buyers. I built responsive product pages, category views, and interactive UI elements using HTML, CSS, and JavaScript.</p>
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Python</span>
+                                <span>SQL</span>
+                            </div>
+                            <a href="https://ruthika2022.github.io/Kissan-Market/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card glass">
+                        <div class="project-content">
+                            <h3 class="orbitron">Movie Portal</h3>
+                            <p>A responsive web application that allows users to explore and browse different movies with an interactive interface. Implemented features to display movie details, categories, and visuals, focusing on clean UI design and smooth navigation.</p>
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>UI/UX</span>
+                            </div>
+                            <a href="https://yaminibaindla-coder.github.io/movies---project/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card glass">
+                        <div class="project-content">
+                            <h3 class="orbitron">Personal Portfolio</h3>
+                            <p>Developed to showcase my skills, projects, and professional background. Designed a clean and responsive user interface that highlights technical skills, project work, and contact information with a focus on accessibility.</p>
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Responsive</span>
+                            </div>
+                            <a href="https://yaminibaindla-coder.github.io/portfolio-website/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card glass">
+                        <div class="project-content">
+                            <h3 class="orbitron">Glasses Recognition</h3>
+                            <p>Built a real-time hand sign recognition system using Teachable Machine. Implemented a machine learning model to accurately detect and classify hand sign numbers, integrated with a user-friendly interface.</p>
+                            <div class="tags">
+                                <span>ML</span>
+                                <span>Computer Vision</span>
+                                <span>Teachable Machine</span>
+                            </div>
+                            <a href="https://yaminibaindla.weebly.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card glass">
+                        <div class="project-content">
+                            <h3 class="orbitron">GameZone</h3>
+                            <p>An interactive gaming website where users can explore a collection of games, play them online instantly, or download them for offline use. Designed for a smooth and responsive gaming experience.</p>
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Gaming</span>
+                            </div>
+                            <a href="https://yaminibaindla-coder.github.io/game/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="projects" class="section card">
-      <div class="section-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7v10h16V7H4zm2 2h12v6H6V9zm6-5 6 3-6 3-6-3 6-3z"/></svg></span><h2>Projects</h2></div>
-      <div class="project-card">
-        <h3>Kisan Market</h3>
-        <p>A mobile-first marketplace website that connects farmers with buyers. I built responsive product pages, category views, and interactive UI elements using HTML, CSS, and JavaScript.</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Python, SQL</p>
-        <p><strong>Tools:</strong> Visual Studio Code, MySQL Workbench</p>
-        <p><a href="https://ruthika2022.github.io/Kissan-Market/" target="_blank" rel="noreferrer">View live project</a></p>
-      </div>
-      <br>
-      <div class="project-card">
-        <h3>Movie Portal</h3>
-        <p>Developed a Movie Portal, a responsive web application that allows users to explore and browse different movies with an interactive and user-friendly interface. Implemented features to display movie details such as titles, categories, and visuals, making it easy for users to discover content. Focused on clean UI design and smooth navigation to enhance user experience across devices.</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-        <p><strong>Tools:</strong> VS Code</p>
-        <p><a href="https://yaminibaindla-coder.github.io/movies---project/" target="_blank" rel="noreferrer">View live project</a></p>
-      </div>
-      <br>
-      <div class="project-card">
-        <h3>Portfolio</h3>
-        <p>Developed a Personal Portfolio Website to showcase my skills, projects, and professional background as a fresher in data analysis and web development. Designed a clean and responsive user interface that highlights my technical skills, project work, and contact information in a structured manner. Focused on simplicity, accessibility, and user-friendly navigation to ensure a smooth browsing experience across different devices.</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-        <p><strong>Tools:</strong> VS Code</p>
-        <p><a href="https://yaminibaindla-coder.github.io/portfolio-website/" target="_blank" rel="noreferrer">View live project</a></p>
-      </div>
-      <br>
-      <div class="project-card">
-        <h3>Glasses Recognition</h3>
-        <p>Built a real-time hand sign recognition system using Teachable Machine. Implemented machine learning model to accurately detect and classify hand sign numbers. Integrated the model with a user-friendly interface for seamless interaction. Applied basic computer vision and ML concepts to improve detection accuracy.</p>
-        <p><strong>Technologies:</strong> Teachable Machine, Computer Vision, ML</p>
-        <p><strong>Tools:</strong> Weebly</p>
-        <p><a href="https://yaminibaindla.weebly.com/" target="_blank" rel="noreferrer">View live project</a></p>
-      </div>
-      <br>
-       <div class="project-card">
-        <h3>GameZone</h3>
-        <p>GameZone is a simple and interactive gaming website where users first see a landing page with a “Play Now” button. After clicking it, they can explore a collection of games, play them online instantly, or download them for offline use. The website is user-friendly, responsive, and designed for a smooth gaming experience.</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-        <p><strong>Tools:</strong> VS Code</p>
-        <p><a href="https://yaminibaindla-coder.github.io/game/" target="_blank" rel="noreferrer">View live project</a></p>
-      </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="orbitron">_Get_In_Touch</h2>
+                </div>
+                <div class="contact-container glass">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required placeholder=" "></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn primary">Send Transmission</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section id="certifications" class="section card">
-      <div class="section-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2 7 6v7c0 3.9 2.9 7.3 5 8 2.1-.7 5-4.1 5-8V6l-5-4zm-1 16.5V18h2v.5l-1 .3-1-.3z"/></svg></span><h2>Certifications</h2></div>
-      <ul class="cert-list">
-        <li>Introduction to HTML – Simplilearn, 2025</li>
-        <li>Introduction to CSS – Simplilearn, 2026</li>
-        <li>Web Development for Beginners – Simplilearn, 2025</li>
-        <li>Python Intro Course – Nexademy, 2026</li>
-        <li>Communication Skills – Simplilearn, 2025</li>
-        <li>Public Skills – Simplilearn, 2025</li>
-        <li>Spoken English – Simplilearn, 2025</li>
-      </ul>
-    </section>
-
-    <section class="section card two-column">
-      <div>
-        <div class="section-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 2h12l-1 5H7l-1-5zm4 8h4v5H10V10zm-4 1h2v6H6v-6zm12 0h2v6h-2v-6z"/></svg></span><h2>Achievements</h2></div>
-        <ul>
-          <li>Group Discussion (GD) at ACT Edunet</li>
-          <li>Qualities Top Performer at Freshworks, 2026</li>
-        </ul>
-      </div>
-      <div>
-        <div class="section-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C7 2 3 6 3 11c0 5 4 9 9 9s9-4 9-9c0-5-4-9-9-9zm0 2a7 7 0 0 1 7 7c0 1.9-.8 3.6-2 4.8V15h-2v-2h1c.1-.6.2-1.2.2-1.8a3 3 0 0 0-6 0c0 .6.1 1.2.2 1.8h1v2h-2v-1.2A6.98 6.98 0 0 1 5 11a7 7 0 0 1 7-7z"/></svg></span><h2>Languages</h2></div>
-        <ul>
-          <li>English</li>
-          <li>Telugu</li>
-          <li>Hindi</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="hobbies" class="section card hobbies-section">
-      <div class="section-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span><h2>Hobbies & Interests</h2></div>
-      <div class="hobbies-grid">
-        <div>coding practice</div>
-        <div>Music</div>
-        <div>Photography</div>
-        <div>Exploring Technology</div>
-      </div>
-    </section>
-
-    <section id="contact" class="section card contact-form-section">
-      <div class="section-heading">
-        <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1 .9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-3 5H7v2h10V9zm0 4H7v2h10v-2z"/></svg></span>
-        <h2>Contact Me</h2>
-      </div>
-      <form class="contact-form" action="#" method="post">
-        <div class="form-field">
-          <label for="full-name">Name</label>
-          <input id="full-name" name="full-name" type="text" class="form-input" placeholder="Your name" required />
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Yamini Baindla. Built with <span class="accent">Three.js</span> & <span class="accent">GSAP</span>.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/yamini-baindla" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yaminibaindla-coder" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </div>
-        <div class="form-field">
-          <label for="email-address">Email</label>
-          <input id="email-address" name="email-address" type="email" class="form-input" placeholder="your@example.com" required />
-        </div>
-        <div class="form-field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
-        </div>
-        <div class="form-actions">
-          <button type="submit" class="button primary">Send Message</button>
-        </div>
-      </form>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Ready to collaborate? Reach out through email or LinkedIn to start a new web project.</p>
-      <p><a href="mailto:yaminibaindla@gmail.com">yaminibaindla@gmail.com</a> · +91 95152 86453</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- Scripts -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
